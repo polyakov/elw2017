@@ -4,3 +4,5 @@ phases:
   build:
     commands:
       - echo "test1"
+      - pwd
+      - ls
