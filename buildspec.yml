@@ -6,3 +6,4 @@ phases:
       - echo "test1"
       - pwd
       - ls
+      - aws s3 sync ./src/students s3://www.elijahsgames.com/ELW2017/studeents
