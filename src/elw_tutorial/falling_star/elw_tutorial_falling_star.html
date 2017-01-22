@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,36 +5,7 @@
     <script src="phaser.min.js"></script>
 </head>
 <body>
-<script>
-    var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
-    var star = null;
-    var ground = null;
-
-    function preload() {
-        game.load.image('sky', 'assets/sky.png');
-        game.load.image('ground', 'assets/platform.png');
-        game.load.image('star', 'assets/star.png');
-        game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
-
-
-    }
-
-    function create() {
-        game.physics.startSystem(Phaser.Physics.ARCADE);
-        star = game.add.sprite(0, 0, 'star');
-        game.physics.arcade.enable(star);
-        star.body.gravity.y = 100;
-        ground = game.add.sprite(0, game.world.height - 32, 'ground');
-        ground.scale.setTo(15, 2);
-        game.physics.arcade.enable(ground);
-        ground.body.immovable = true;
-        star.body.bounce.y = 0.3;
-    }
-
-    function update() {
-        game.physics.arcade.collide(star, ground);
-    }
-</script>
-
+    <script>
+    </script>
 </body>
 </html>
